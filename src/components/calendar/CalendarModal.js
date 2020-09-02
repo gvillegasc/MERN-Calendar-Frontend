@@ -5,6 +5,7 @@ import moment from 'moment';
 import Swal from 'sweetalert2';
 import { useSelector, useDispatch } from 'react-redux';
 import { uiCloseModal } from '../../actions/ui';
+import { eventAddNew } from '../../actions/events';
 
 const customStyles = {
 	content: {
@@ -85,9 +86,14 @@ export const CalendarModal = () => {
 		}
 
 		// TODO: Guardar en la base de datos
+		dispatch(
+			eventAddNew({
+				...formValues,
+				id: new Date().getTime(),
+			})
+		);
 
 		setTitleValid(true);
-
 		closeModal();
 	};
 
