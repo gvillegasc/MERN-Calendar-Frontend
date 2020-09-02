@@ -90,6 +90,10 @@ export const CalendarModal = () => {
 			eventAddNew({
 				...formValues,
 				id: new Date().getTime(),
+				user: {
+					_id: '123',
+					name: 'Gerardo',
+				},
 			})
 		);
 
