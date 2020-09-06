@@ -68,7 +68,8 @@ body {
 	border-radius: 100%;
 	bottom: 25px;
 	font-size: 30px;
-	padding: 25px;
+	/* padding: 25px; */
+	padding: 1rem;
 	position: fixed;
 	right: 25px;
 }
