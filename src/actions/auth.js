@@ -11,7 +11,6 @@ export const startLogin = (email, password) => {
 			localStorage.setItem('token', body.token);
 			localStorage.setItem('token-init-date', new Date().getTime());
 			dispatch(login({ uid: body.uid, name: body.name }));
-			console.log(body);
 		} else {
 			Swal.fire('Error', body.msg, 'error');
 		}
